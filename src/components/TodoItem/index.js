@@ -27,6 +27,8 @@ const TodoItem = (props) => {
           setCheckboxStatus((prevState) => !prevState);
         };
 
+        const labelClass = status === "COMPLETED" ? "tick-class" : "nor-class";
+
         return (
           <li className="label-container">
             <input
@@ -37,7 +39,7 @@ const TodoItem = (props) => {
               }}
               checked={isCheckbox}
             />
-            <p>{title}</p>
+            <p className={labelClass}>{title}</p>
             <button type="button" onClick={onDeleteBtn} className="delete-btn">
               <AiOutlineDelete className="delete-icon" />
             </button>

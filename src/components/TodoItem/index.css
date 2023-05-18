@@ -53,3 +53,9 @@
   border-width: 0px;
   background-color: transparent;
 }
+.tick-class {
+  text-decoration: line-through;
+}
+.nor-class {
+  text-decoration: none;
+}

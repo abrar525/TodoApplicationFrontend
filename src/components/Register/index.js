@@ -78,9 +78,11 @@ const Register = () => {
           value={password}
           onChange={onChangePassword}
         />
-        <button type="submit">Register</button>
-        <p>OR</p>
-        <button type="button" onClick={onClickNavigateLogin}>
+        <button type="submit" className="btns">
+          Register
+        </button>
+        <p style={{ textAlign: "center" }}>OR</p>
+        <button type="button" onClick={onClickNavigateLogin} className="btns">
           Login
         </button>
       </form>

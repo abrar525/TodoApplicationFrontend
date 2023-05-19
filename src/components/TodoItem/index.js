@@ -32,6 +32,7 @@ const TodoItem = (props) => {
         return (
           <li className="label-container">
             <input
+              style={{ cursor: "pointer" }}
               type="checkbox"
               onClick={() => {
                 onChangeCheckbox();

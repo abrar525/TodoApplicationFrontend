@@ -1,8 +1,8 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
 import { useState } from "react";
 
 import axios from "axios";
-
+import Cookies from "js-cookie";
 import "./index.css";
 
 const Register = () => {
@@ -48,6 +48,20 @@ const Register = () => {
 
   const onClickNavigateLogin = () => {
     navigate("/login", { replace: true });
+  };
+
+  const jwtToken = Cookies.get("jwtToken");
+
+  if (jwtToken !== undefined) {
+    try {
+      return <Navigate to="/" />;
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
+  const onClickNavigateRegister = () => {
+    navigate("/register", { replace: true });
   };
 
   return (
